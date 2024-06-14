@@ -1,0 +1,20 @@
+{
+  "name": "batik-culture",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/tailwind": "^5.1.0",
+    "astro": "^4.10.2",
+    "flowbite": "^2.3.0",
+    "pagedone": "^1.1.2",
+    "swiper": "^11.1.4",
+    "tailwindcss": "^3.4.4"
+  }
+}

@@ -1,0 +1,27 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeroPage from '../components/HeroPage.astro';
+import AreasBatik from '../components/AreasBatik.astro';
+
+import '../styles/global.css';
+---
+
+<BaseLayout>
+
+    <HeroPage title="Daerah Batik" description="Home / Daerah Batik"/>
+
+    <div class="container mx-auto px-6 py-8 my-12">
+		<div class="flex flex-col md:flex-row items-center justify-between gap-4">
+			<div class="md:w-6/12 mb-6 md:mb-0">
+				<h2 class="font-bold text-7xl md:text-5xl mb-4">6 Daerah<br> Penghasil Batik di Indonesia</h2>
+			</div>
+			<div class="md:w-3/6 flex justify-end">
+                <p class="text-base md:text-lg">Indonesia memiliki beragam daerah penghasil batik, masing-masing dengan keunikan dan ciri khasnya. Setiap daerah tersebut memiliki motif, teknik, dan sejarah yang berbeda dalam pembuatan batik, mencerminkan kekayaan budaya dan tradisi lokal yang diwariskan dari generasi ke generasi.
+                </p>
+			</div>
+		</div>
+	</div>
+
+    <AreasBatik />
+
+</BaseLayout>

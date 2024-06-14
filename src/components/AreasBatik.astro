@@ -1,0 +1,33 @@
+---
+import "../styles/global.css";
+
+import { daerahData } from '../data/daerah';
+
+function truncateText(text, maxWords) {
+    const words = text.split(' ');
+    if (words.length > maxWords) {
+        return words.slice(0, maxWords).join(' ') + '...';
+    }
+    return text;
+}
+---
+
+<div class="container mx-auto p-6 mt-28 mb-12 bg-[#F4F0EC] rounded-3xl">
+    <h2 class="text-center text-4xl font-bold pt-10 pb-6">Daerah Penghasil Batik</h2>
+    <p class="text-center">Indonesia dikenal dengan beragam daerah penghasil batik <br> masing-masing memiliki ciri khas dan keunikan tersendiri.</p>
+    <div id="daerah-container" class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 mx-auto">
+        {daerahData.map((daerah) => (
+            <div class="daerah-item">
+                <img class="daerah-item-image" src={daerah.gambar} alt={daerah.nama_daerah} />
+                <div class="daerah-item-content">
+                    <div class="province"><a href={`/detailDaerah/${daerah._id.$oid}`}>{daerah.nama_daerah}</a></div>
+                    <div class="line-item"></div>
+                    <div class="daerah-item-bottom">
+                        <div class="city"><p class="city-name">{truncateText(daerah.deskripsi, 3)}</p></div>
+                        <div><a href={`/detailDaerah/${daerah._id.$oid}`} class="teenyicons--arrow-right-solid"></a></div>
+                    </div>    
+                </div>
+            </div>
+        ))}
+    </div>
+</div>

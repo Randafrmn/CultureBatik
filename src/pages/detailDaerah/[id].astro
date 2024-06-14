@@ -1,0 +1,61 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import HeroPage from "../../components/HeroPage.astro";
+import { daerahData } from "../../data/daerah";
+import  "../../styles/global.css";
+
+export function getStaticPaths() {
+  return daerahData.map((daerah) => ({
+    params: { id: daerah._id.$oid },
+  }))
+}
+
+const getDaerahDetailById = (id : string) => {
+  return daerahData.find((daerah) => daerah._id.$oid === id);
+};
+
+const { id } = Astro.params;
+const daerah = getDaerahDetailById(id);
+---
+
+<BaseLayout>
+
+    <HeroPage title={daerah ? daerah.nama_daerah : ""} description="Home / Detail Daerah"/>
+
+    {
+        daerah ? (
+        <div class="container mx-auto my-12 p-6">
+            <div class="flex flex-col items-center justify-center">
+                <img
+                class="areas-image w-3/4 mb-4 md:mb-0 rounded-lg shadow-md"
+                src={daerah.gambar}
+                alt={daerah.nama_daerah}
+                />
+                <div class="flex-1 w-3/4">
+                    <h2 class="text-2xl font-bold mb-2 mt-4 text-gray-800">{daerah.nama_daerah}</h2>
+                    <p class="font-medium text-lg mb-2 text-gray-600">{daerah.alamat}</p>
+                    <p class="text-base leading-relaxed text-justify text-gray-700">{daerah.deskripsi}</p>
+                </div>
+            </div>
+            <div class="container mx-auto mt-12 p-6">
+                {daerah.batik.map((batik) => (
+                <div class="flex flex-col items-center justify-center bg-[#F4F0EC] rounded-3xl my-6 p-6">
+                    <h1 class="text-4xl font-bold text-center pb-6">{batik.nama_batik}</h1>
+                    <img
+                    class="areas-image w-3/4 mb-4 md:mb-4 rounded-lg shadow-md"
+                    src={batik.motif_batik}
+                    alt={batik.nama_batik}
+                    />
+                    <div class="flex-1 w-3/4">
+                    <p class="text-base leading-relaxed text-justify text-gray-700">{batik.sejarah}</p>
+                    <p class="text-base leading-relaxed mt-2 text-justify text-gray-700">{batik.makna_batik}</p>
+                    </div>
+                </div>
+                ))}
+            </div>
+        </div>
+        ) : (
+            <div id="detail-container">Data not found {id}</div>
+        )
+    }
+</BaseLayout>

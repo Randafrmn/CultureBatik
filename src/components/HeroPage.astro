@@ -1,0 +1,16 @@
+---
+const { title } = Astro.props
+const { description } = Astro.props
+---
+
+<div class="container mx-auto mt-12">
+    <div class="container mx-auto mt-12">
+        <div class="relative flex flex-col justify-end items-center">
+            <img class="hero-image w-full object-cover" src="/img/Carousel3.png" alt="">
+            <div class="title-page absolute rounded-t-3xl bg-[#FFFFFF] w-72 h-24">
+                <h1 class="text-[#292F36] text-center font-display text-2xl font-bold mt-4">{title}</h1>
+                <p class="text-[#292F36] text-center text-sm mt-2">{description}</p>
+            </div>
+    </div>
+</div>
+    
