@@ -285,7 +285,6 @@ span {
 
 /* Responsitive */
 @media screen and (max-width: 538px) {
-
     /* Hero */
     .hero {
         border-radius: 10px;
@@ -305,4 +304,7 @@ span {
         position: absolute;
     }
 
+    .hero-button {
+        font-size: 12px;
+    }
 }
