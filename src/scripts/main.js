@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
         batikCard.dataset.batik = JSON.stringify(batik); // Store batik data in dataset
 
         batikCard.innerHTML = `
-            <img src="${batik.motif_batik}" class="card-img-top w-full h-64" alt="${batik.nama_batik}">
+            <img src="${batik.motif_batik}" class="card-img-top w-full h-72 md:h-64" alt="${batik.nama_batik}">
             <div class="p-4 rounded-t-sm">
                 <a class="block text-xl text-center font-semibold">${batik.nama_batik}</a>
             </div>
