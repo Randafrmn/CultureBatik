@@ -1,8 +1,24 @@
-import { DataAlat } from '../data/data';
+import axios from "axios";
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
     const alatContainer = document.getElementById('alat-container');
-    const alatbatiks = DataAlat.getAll();
+
+    // Fungsi untuk mengambil data alat dari API pakai Axios
+    async function fetchAlatData() {
+        try {
+        const response = await axios.get('https://backend-cultik-l0xm2i4e6-kennis-projects-1f9db525.vercel.app/alatBatik');
+        return response.data.data.data_alat_batik;
+        } catch (error) {
+        console.error('Failed to fetch batik data:', error);
+        return [];
+        }
+    }
+
+    const alatbatiks = await fetchAlatData();
+    if (!Array.isArray(alatbatiks)) {
+        console.error('Invalid data format:', alatbatiks);
+        return;
+    }
 
     alatbatiks.forEach(alat => {
         const alatbatikCol = document.createElement('div');
@@ -12,10 +28,10 @@ document.addEventListener('DOMContentLoaded', () => {
         alatbatikCard.classList.add('card', 'batik-card', 'border', 'border-gray-200', 'rounded-lg', 'overflow-hidden', 'h-full', 'bg-[#FFFFFF]');
 
         alatbatikCard.innerHTML = `
-            <img src="${alat.gambar}" class="card-img-top w-full" alt="${alat.nama_alat}">
+            <img src="${alat.gambar}" class="card-img-top w-full h-96 object-cover" alt="${alat.nama_alat}">
             <div class="card-body p-4 rounded-t-sm">
                 <h3 class="text-xl text-center">${alat.nama_alat}</h3>
-                <p class="text-sm text-center"><strong>Deskripsi :</strong> ${alat.deskripsi}</p>
+                <p class="text-sm text-center">${alat.deskripsi}</p>
             </div>
         `;
 

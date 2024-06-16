@@ -1,10 +1,24 @@
-import { DataBatiks } from '../data/data';
+import axios from "axios";
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
     const batikContainer = document.getElementById('batik-container');
-    const batiks = DataBatiks.getAll();
 
-      // Create modal element
+    async function fetchBatikData() {
+        try {
+        const response = await axios.get('https://backend-cultik-l0xm2i4e6-kennis-projects-1f9db525.vercel.app/dataMotifBatik');
+        return response.data.data.data_motif_batik;
+        } catch (error) {
+        console.error('Failed to fetch batik data:', error);
+        return [];
+        }
+    }
+
+    const batiks = await fetchBatikData();
+    if (!Array.isArray(batiks)) {
+        console.error('Invalid data format:', batiks);
+        return;
+    }
+
     const modal = document.createElement("div");
     modal.id = "batik-modal";
     modal.classList.add("modal");
@@ -27,11 +41,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     batiks.forEach(batik => {
         const batikCol = document.createElement('div');
-        batikCol.classList.add('col-md-4', 'mb-4', 'md:mb-0', 'cursor-pointer');
+        batikCol.classList.add('col-md-4', 'mb-4', 'lg:mb-0', 'cursor-pointer');
 
         const batikCard = document.createElement('div');
         batikCard.classList.add('card', 'batik-card', 'border', 'border-gray-200', 'rounded-lg', 'overflow-hidden', 'h-full', 'bg-[#FFFFFF]');
-        batikCard.dataset.batik = JSON.stringify(batik); // Store batik data in dataset
+        batikCard.dataset.batik = JSON.stringify(batik);
 
         batikCard.innerHTML = `
             <img src="${batik.motif_batik}" class="card-img-top w-full h-72 md:h-64" alt="${batik.nama_batik}">

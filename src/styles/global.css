@@ -33,6 +33,18 @@ h1, h2 {
     height: 500px;
 }
 
+/* Active */
+.active {
+    background-color: #CDA274;
+    color: #ffffff;
+}
+
+.active:hover {
+    background-color: #CDA274;
+    color: #ffffff;
+}
+  
+
 /* TitlePage */
 .title-page {
     color: var(--bgButton);
@@ -105,11 +117,20 @@ h1, h2 {
     -webkit-mask-size: 100% 100%;
     mask-size: 100% 100%;
     text-decoration: none;
-    color: var(--bgButton);
+    color: var(--goldText);
+    transition: color 0.3s ease;
+}
+
+.teenyicons--arrow-right-solid.areas {
+    color: white;
     transition: color 0.3s ease;
 }
 
 .teenyicons--arrow-right-solid:hover {
+    color: var(--bgButton);
+}
+
+.teenyicons--arrow-right-solid.areas:hover {
     color: var(--goldText);
 }
 
@@ -302,5 +323,39 @@ h1, h2 {
 
     .hero-button {
         font-size: 12px;
+    }
+
+    .hero-image {
+        height: 200px;
+    }
+
+    /* Proses Pembuatan */
+    .videoPembuatan {
+        padding: 1em;
+        width: 100%;
+        margin: auto;
+    }
+
+    .sizeVideo {
+        width: 100%;
+        height: 18em;
+        border-radius: 20px;
+    }
+
+
+    .videoPembuatan p {
+        padding: 1em;
+        text-align: center;
+    }
+
+    .areas-image {
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    /* Daerah */
+    .daerah-item {
+        height: 600px;
     }
 }

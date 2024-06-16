@@ -1,8 +1,8 @@
 ---
+// Import necessary packages and CSS
 import "../styles/global.css";
 
-import { daerahData } from '../data/daerah';
-
+// Function to truncate text
 function truncateText(text, maxWords) {
     const words = text.split(' ');
     if (words.length > maxWords) {
@@ -10,6 +10,11 @@ function truncateText(text, maxWords) {
     }
     return text;
 }
+
+// Fetch data from API
+const response = await fetch('https://backend-cultik-l0xm2i4e6-kennis-projects-1f9db525.vercel.app/dataPenghasil');
+const data = await response.json();
+const daerahData = data.data.daerah_penghasil;
 ---
 
 <div class="container mx-auto p-6 mt-28 mb-12 bg-[#F4F0EC] rounded-3xl">
@@ -24,8 +29,8 @@ function truncateText(text, maxWords) {
                     <div class="line-item"></div>
                     <div class="daerah-item-bottom">
                         <div class="city"><p class="city-name">{truncateText(daerah.deskripsi, 3)}</p></div>
-                        <div><a href={`/detailDaerah/${daerah._id.$oid}`} class="teenyicons--arrow-right-solid"></a></div>
-                    </div>    
+                        <div><a href={`/detailDaerah/${daerah._id.$oid}`} class="teenyicons--arrow-right-solid areas"></a></div>
+                    </div>
                 </div>
             </div>
         ))}
