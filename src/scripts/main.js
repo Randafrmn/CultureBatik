@@ -1,6 +1,10 @@
 import axios from "axios";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 document.addEventListener('DOMContentLoaded', async () => {
+    AOS.init();
+
     const batikContainer = document.getElementById('batik-container');
 
     async function fetchBatikData() {
@@ -42,6 +46,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     batiks.forEach(batik => {
         const batikCol = document.createElement('div');
         batikCol.classList.add('col-md-4', 'mb-4', 'lg:mb-0', 'cursor-pointer');
+        batikCol.setAttribute('data-aos', 'fade-right');
+        batikCol.setAttribute('data-aos-duration', '1000');
+        batikCol.setAttribute('data-aos-anchor-placement', 'top-bottom');
+        batikCol.setAttribute('data-aos-easing', 'ease-in-out');        
 
         const batikCard = document.createElement('div');
         batikCard.classList.add('card', 'batik-card', 'border', 'border-gray-200', 'rounded-lg', 'overflow-hidden', 'h-full', 'bg-[#FFFFFF]');

@@ -63,7 +63,7 @@ h1, h2 {
 /* Detail */
 .detail-image {
     width: 100%;
-    height: 200px;
+    height: 350px;
 }
 
 .detail-image.active {
@@ -349,6 +349,11 @@ h1, h2 {
 
     .areas-image {
         height: 300px;
+    }
+
+    /* Detail */
+    .detail-image {
+        height: 250px;
     }
 }
 
