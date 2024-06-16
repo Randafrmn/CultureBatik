@@ -12,6 +12,7 @@
   "dependencies": {
     "@astrojs/tailwind": "^5.1.0",
     "@astrojs/vercel": "^7.7.0",
+    "aos": "^2.3.4",
     "astro": "^4.10.2",
     "axios": "^1.7.2",
     "flowbite": "^2.3.0",

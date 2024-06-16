@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import { gsap } from 'gsap';
 ---
 
 <div class="container mx-auto relative">
@@ -14,8 +15,23 @@ import '../styles/global.css';
   </div>
 </div>
 
-<script is:inline>
+<script>
   document.addEventListener('DOMContentLoaded', function() {
+    const heroContainer = document.querySelector('.hero-container');
+    if (heroContainer) {
+      gsap.fromTo(heroContainer, 
+        {
+          y: 80, 
+          opacity: 0
+        },
+        {
+          duration: 1,
+          y: 0,
+          opacity: 1,
+          ease: "power2.out"
+        }
+      );
+    }
     const button = document.querySelector('.hero-button');
 
     button.addEventListener('click', function() {

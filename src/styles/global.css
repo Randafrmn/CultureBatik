@@ -63,7 +63,7 @@ h1, h2 {
 /* Detail */
 .detail-image {
     width: 100%;
-    height: auto;
+    height: 200px;
 }
 
 .detail-image.active {
@@ -233,7 +233,6 @@ h1, h2 {
 }
 
 /* Modal */
-/* Modal styles */
 .modal {
     display: none;
     position: fixed;
