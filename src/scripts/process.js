@@ -33,11 +33,11 @@ document.addEventListener('DOMContentLoaded', async () => {
         alatbatikCol.setAttribute('data-aos-easing', 'ease-in-out');  
 
         const alatbatikCard = document.createElement('div');
-        alatbatikCard.classList.add('card', 'batik-card', 'border', 'border-gray-200', 'rounded-lg', 'overflow-hidden', 'h-full', 'bg-[#FFFFFF]');
+        alatbatikCard.classList.add('card', 'batik-card', 'border', 'border-gray-200', 'dark:border-neutral-800', 'rounded-lg', 'overflow-hidden', 'h-full', 'bg-[#FFFFFF]');
 
         alatbatikCard.innerHTML = `
             <img src="${alat.gambar}" class="card-img-top w-full h-96 object-cover" alt="${alat.nama_alat}">
-            <div class="card-body p-4 rounded-t-sm">
+            <div class="card-body p-4 rounded-t-sm dark:bg-neutral-800">
                 <h3 class="text-xl text-center">${alat.nama_alat}</h3>
                 <p class="text-sm text-center">${alat.deskripsi}</p>
             </div>
