@@ -2,6 +2,7 @@
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 import '../styles/global.css';
+import "flowbite";
 const pageTitle = "Culture Batik";
 ---
 
@@ -20,9 +21,18 @@ const pageTitle = "Culture Batik";
 	<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
+	<!-- Script to toggle dark mode -->
+	<script>
+		if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+			document.documentElement.classList.add('dark');
+		} else {
+			document.documentElement.classList.remove('dark')
+		}
+	</script>
+
 	<title>{pageTitle}</title>
 </head>
-<body>
+<body class="dark:bg-neutral-800">
 	<Navbar />
 
 	<slot />

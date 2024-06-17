@@ -52,12 +52,12 @@ document.addEventListener('DOMContentLoaded', async () => {
         batikCol.setAttribute('data-aos-easing', 'ease-in-out');        
 
         const batikCard = document.createElement('div');
-        batikCard.classList.add('card', 'batik-card', 'border', 'border-gray-200', 'rounded-lg', 'overflow-hidden', 'h-full', 'bg-[#FFFFFF]');
+        batikCard.classList.add('card', 'batik-card', 'border', 'border-gray-200', 'dark:border-neutral-800' , 'rounded-lg', 'overflow-hidden', 'h-full', 'bg-[#FFFFFF]', 'dark:bg-neutral-800');
         batikCard.dataset.batik = JSON.stringify(batik);
 
         batikCard.innerHTML = `
             <img src="${batik.motif_batik}" class="card-img-top w-full h-72 md:h-64" alt="${batik.nama_batik}">
-            <div class="p-4 rounded-t-sm">
+            <div class="p-4 rounded-t-sm dark:text-white">
                 <a class="block text-xl text-center font-semibold">${batik.nama_batik}</a>
             </div>
         `;

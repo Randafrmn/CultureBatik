@@ -12,7 +12,6 @@ body {
     font-family: 'Jost', sans-serif;
     overflow-x: hidden;
     align-items: center;
-    background-color: var(--bgColor);
 }
 
 :root {
@@ -36,15 +35,8 @@ h1, h2 {
 /* Active */
 .active {
     background-color: #CDA274;
-    color: #ffffff;
-}
-
-.active:hover {
-    background-color: #CDA274;
-    color: #ffffff;
 }
   
-
 /* TitlePage */
 .title-page {
     color: var(--bgButton);
@@ -124,10 +116,6 @@ h1, h2 {
 .teenyicons--arrow-right-solid.areas {
     color: white;
     transition: color 0.3s ease;
-}
-
-.teenyicons--arrow-right-solid:hover {
-    color: var(--bgButton);
 }
 
 .teenyicons--arrow-right-solid.areas:hover {
@@ -362,4 +350,5 @@ h1, h2 {
     .daerah-item {
         height: 600px;
     }
+    
 }
