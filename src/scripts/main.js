@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     modal.id = "batik-modal";
     modal.classList.add("modal");
     modal.innerHTML = `
-            <div class="modal-content">
+            <div class="modal-content dark:bg-[#795a3a] dark:border-[#715335] dark:text-white">
                 <span class="close">&times;</span>
                 <img id="modal-image" src="" alt="">
                 <h3 id="modal-title"></h3>
