@@ -68,7 +68,7 @@ h1, h2 {
 
 .detail-image-process {
     width: 100%;
-    height: auto;
+    height: 350px;
 }
 .detail-image-process.active {
     display: block;
@@ -76,7 +76,7 @@ h1, h2 {
 
 .detail-image-process-second {
     width: 100%;
-    height: auto;
+    height: 350px;
 }
 .detail-image-process-second.active {
     display: block;
@@ -231,9 +231,9 @@ h1, h2 {
     height: 100%;
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.5);
-  }
-  
-  .modal-content {
+}
+
+.modal-content {
     border-radius: 12px;
     background-color: #fefefe;
     margin: 15% auto;
@@ -242,51 +242,51 @@ h1, h2 {
     width: 80%;
     max-width: 600px;
     position: relative;
-  }
-  
-  .close {
-    color: #aaa;
+}
+
+.close {
+color: #aaa;
     position: absolute;
     top: 0px;
-    right: 10px; /* Mengatur posisi ke kanan */
+    right: 10px;
     font-size: 28px;
     font-weight: bold;
-  }
-  
-  .modal-content {
-    position: relative; /* Membuat posisi relatif untuk child */
-  }
-  
-  .modal-content .close {
+}
+
+.modal-content {
+    position: relative;
+}
+
+.modal-content .close {
     color: black; /* Atur warna close button */
-  }
-  
-  /* Hover effect untuk close button */
-  .close:hover,
-  .close:focus {
+}
+
+/* Hover effect untuk close button */
+.close:hover,
+.close:focus {
     color: red;
     text-decoration: none;
     cursor: pointer;
-  }
-  
-  #modal-image {
+}
+
+#modal-image {
     width: 100%;
     height: auto;
     margin-bottom: 20px;
     margin-top: 30px;
-  }
-  
-  #modal-title {
+}
+
+#modal-title {
     font-size: 24px;
     margin-bottom: 10px;
-  }
-  
-  #modal-sejarah,
-  #modal-makna {
-    margin-bottom: 10px;
-  }
+}
 
-  .card-img-top {
+#modal-sejarah,
+#modal-makna {
+    margin-bottom: 10px;
+}
+
+.card-img-top {
     height: 350px; 
     width: 100%;
     object-fit: cover; 
@@ -420,6 +420,14 @@ h1, h2 {
 
     /* Detail */
     .detail-image {
+        height: 250px;
+    }
+
+    .detail-image-process {
+        height: 250px;
+    }
+
+    .detail-image-process-second {
         height: 250px;
     }
 }
