@@ -3,10 +3,12 @@ import '../styles/global.css';
 ---
 
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
-    <div class="relative">
+    <div class="relative" data-aos="fade-right" data-aos-duration="1000" data-aos-anchor-placement="top-bottom"
+    data-aos-easing="ease-in-out">
         <img id="process-image" class="detail-image-process md:w-5/12 rounded-3xl object-cover" src="/img/Carousel1.png" alt="Process Image">
     </div>
-    <div class="list-group">
+    <div class="list-group" data-aos="fade-right" data-aos-duration="1000" data-aos-anchor-placement="top-bottom"
+    data-aos-easing="ease-in-out">
         <a class="block py-3 px-5 hover:bg-gray-100 transition duration-300 ease-in-out rounded-lg shadow-md border border-gray-200 cursor-pointer" data-target="detail-1" data-image-process="/img/Carousel1.png" data-info-process="Kegiatan menggambar motif atau pola batik pada secarik kertas, karena tidak semua orang bisa menggambar motif batik sehingga dibutuhkan keterampilan khusus seseorang dalam melakukannya.">01. Nyungging</a>
         <a class="block py-3 px-5 hover:bg-gray-100 transition duration-300 ease-in-out rounded-lg shadow-md border border-gray-200 cursor-pointer" data-target="detail-2" data-image-process="/img/Carousel2.png" data-info-process="Merupakan kegiatan memindahkan gambar atau pola tersebut ke kain.">02. Njaplak</a>
         <a class="block py-3 px-5 hover:bg-gray-100 transition duration-300 ease-in-out rounded-lg shadow-md border border-gray-200 cursor-pointer" data-target="detail-3" data-image-process="/img/Carousel3.png" data-info-process="Proses menempelkan lilin malam di kain dengan media canting, dimana pada proses ini motif batik akan mulai terlihat.">03. Nglowong</a>
@@ -17,10 +19,12 @@ import '../styles/global.css';
 </div>
 
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-20">
-    <div class="relative md:order-2">
+    <div class="relative md:order-2" data-aos="fade-right" data-aos-duration="1000" data-aos-anchor-placement="top-bottom"
+    data-aos-easing="ease-in-out">
         <img id="process-image-second" class="detail-image-process-second md:w-5/12 rounded-3xl object-cover" src="/img/Carousel2.png" alt="Process Image Second">
     </div>
-    <div class="list-group">
+    <div class="list-group" data-aos="fade-right" data-aos-duration="1000" data-aos-anchor-placement="top-bottom"
+    data-aos-easing="ease-in-out">
         <a class="block py-3 px-5 hover:bg-gray-100 transition duration-300 ease-in-out rounded-lg shadow-md border border-gray-200 cursor-pointer" data-target="detail-5" data-image-process-second="/img/Carousel1.png" data-info-process-second="Tahap dimana proses pewarnaan dilakukan secara menyeluruh pada kain.">07. Ngelir</a>
         <a class="block py-3 px-5 hover:bg-gray-100 transition duration-300 ease-in-out rounded-lg shadow-md border border-gray-200 cursor-pointer" data-target="detail-5" data-image-process-second="/img/Carousel2.png" data-info-process-second="Tahap pertama dalam meluruhkan warna lilin malam ke dalam air yang mendidih.">08. Nglorod</a>
         <a class="block py-3 px-5 hover:bg-gray-100 transition duration-300 ease-in-out rounded-lg shadow-md border border-gray-200 cursor-pointer" data-target="detail-5" data-image-process-second="/img/Carousel3.png" data-info-process-second="Memberikan titik pada garis-garis ornamen utama dengan digunakannya canting kecil dan halus sehingga hasil titik yang dibuat terlihat rapi.">09. Ngrentesi</a>
@@ -30,46 +34,48 @@ import '../styles/global.css';
     </div>
 </div>
 
-<script>
-document.querySelectorAll('.block').forEach(item => {
-    item.addEventListener('mouseenter', () => {
-        const detailImage = document.getElementById('process-image') as HTMLImageElement;
-        const detailImageSecond = document.getElementById('process-image-second') as HTMLImageElement;
-        const imageSrc = item.getAttribute('data-image-process');
-        const imageSrcSecond = item.getAttribute('data-image-process-second');
-        
-        if (imageSrc) {
-            detailImage.src = imageSrc;
-            detailImage.classList.add('active');
-        }
-        
-        if (imageSrcSecond) {
-            detailImageSecond.src = imageSrcSecond;
-            detailImageSecond.classList.add('active');
-        }
-        
-        document.querySelectorAll('.additional-info').forEach(info => info.remove());
+<script is:inline src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script is:inline>
+    AOS.init();
+    document.querySelectorAll('.block').forEach(item => {
+        item.addEventListener('mouseenter', () => {
+            const detailImage = document.getElementById('process-image');
+            const detailImageSecond = document.getElementById('process-image-second');
+            const imageSrc = item.getAttribute('data-image-process');
+            const imageSrcSecond = item.getAttribute('data-image-process-second');
+            
+            if (imageSrc) {
+                detailImage.src = imageSrc;
+                detailImage.classList.add('active');
+            }
+            
+            if (imageSrcSecond) {
+                detailImageSecond.src = imageSrcSecond;
+                detailImageSecond.classList.add('active');
+            }
+            
+            document.querySelectorAll('.additional-info').forEach(info => info.remove());
 
-        const additionalInfo = document.createElement('div');
-        additionalInfo.classList.add('additional-info');
-        
-        const infoText = item.getAttribute('data-info-process');
-        const infoTextSecond = item.getAttribute('data-info-process-second');
-        
-        if (infoText) {
-            additionalInfo.textContent = infoText;
-        }
-        
-        if (infoTextSecond) {
-            additionalInfo.textContent += ' ' + infoTextSecond;
-        }
+            const additionalInfo = document.createElement('div');
+            additionalInfo.classList.add('additional-info');
+            
+            const infoText = item.getAttribute('data-info-process');
+            const infoTextSecond = item.getAttribute('data-info-process-second');
+            
+            if (infoText) {
+                additionalInfo.textContent = infoText;
+            }
+            
+            if (infoTextSecond) {
+                additionalInfo.textContent += ' ' + infoTextSecond;
+            }
 
-        item.insertAdjacentElement('afterend', additionalInfo);
-        additionalInfo.style.display = 'block';
+            item.insertAdjacentElement('afterend', additionalInfo);
+            additionalInfo.style.display = 'block';
+        });
+
+        item.addEventListener('mouseleave', () => {
+            document.querySelectorAll('.additional-info').forEach(info => info.remove());
+        });
     });
-
-    item.addEventListener('mouseleave', () => {
-        document.querySelectorAll('.additional-info').forEach(info => info.remove());
-    });
-});
 </script>

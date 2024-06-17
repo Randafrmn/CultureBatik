@@ -1,6 +1,10 @@
 import axios from "axios";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 document.addEventListener('DOMContentLoaded', async () => {
+    AOS.init();
+
     const alatContainer = document.getElementById('alat-container');
 
     // Fungsi untuk mengambil data alat dari API pakai Axios
@@ -23,6 +27,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     alatbatiks.forEach(alat => {
         const alatbatikCol = document.createElement('div');
         alatbatikCol.classList.add('col-md-4', 'mb-4', 'md:mb-0');
+        alatbatikCol.setAttribute('data-aos', 'fade-right');
+        alatbatikCol.setAttribute('data-aos-duration', '1000');
+        alatbatikCol.setAttribute('data-aos-anchor-placement', 'top-bottom');
+        alatbatikCol.setAttribute('data-aos-easing', 'ease-in-out');  
 
         const alatbatikCard = document.createElement('div');
         alatbatikCard.classList.add('card', 'batik-card', 'border', 'border-gray-200', 'rounded-lg', 'overflow-hidden', 'h-full', 'bg-[#FFFFFF]');

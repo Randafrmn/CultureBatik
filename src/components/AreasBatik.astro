@@ -1,8 +1,7 @@
 ---
-// Import necessary packages and CSS
 import "../styles/global.css";
 
-// Function to truncate text
+// Truncate text
 function truncateText(text, maxWords) {
     const words = text.split(' ');
     if (words.length > maxWords) {
@@ -22,7 +21,8 @@ const daerahData = data.data.daerah_penghasil;
     <p class="text-center">Indonesia dikenal dengan beragam daerah penghasil batik <br> masing-masing memiliki ciri khas dan keunikan tersendiri.</p>
     <div id="daerah-container" class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 mx-auto">
         {daerahData.map((daerah) => (
-            <div class="daerah-item">
+            <div class="daerah-item" data-aos="fade-right" data-aos-duration="1000" data-aos-anchor-placement="top-bottom"
+			data-aos-easing="ease-in-out">
                 <img class="daerah-item-image" src={daerah.gambar} alt={daerah.nama_daerah} />
                 <div class="daerah-item-content">
                     <div class="province"><a href={`/detailDaerah/${daerah._id.$oid}`}>{daerah.nama_daerah}</a></div>
@@ -36,3 +36,8 @@ const daerahData = data.data.daerah_penghasil;
         ))}
     </div>
 </div>
+
+<script is:inline src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script is:inline>
+    AOS.init();
+</script>
