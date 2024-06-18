@@ -1,42 +1,65 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import HeroPage from '../components/HeroPage.astro';
-import AccordionProcess from '../components/AccordionProcess.astro';
-import ToolsBatik from '../components/ToolsBatik.astro';
-import '../styles/global.css';
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HeroPage from "../components/HeroPage.astro";
+import AccordionProcess from "../components/AccordionProcess.astro";
+import ToolsBatik from "../components/ToolsBatik.astro";
+import "../styles/global.css";
 ---
 
 <BaseLayout>
-    
-    <HeroPage title="Proses Pembuatan" description="Home / Proses Pembuatan"/>
+  <HeroPage title="Proses Pembuatan" description="Home / Proses Pembuatan" />
 
-    <div class="container mx-auto px-3 md:px-6 py-12 md:py-14">
-        <div class="videoPembuatan" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom"
-			data-aos-easing="ease-in-out">
-            <iframe class="sizeVideo" src="https://www.youtube.com/embed/cQ23gLNBVRs?si=i52vYgxJHziQVWcU" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <p class="text-base dark:text-white">&copy; Kanal Budaya Indonesia. Video ini diambil dari <a href="https://youtu.be/cQ23gLNBVRs?si=PyiWLr9k1BRgcNhZ" target="_blank">YouTube</a>.</p>
-        </div>
+  <div class="container mx-auto px-3 md:px-6 py-12 md:py-14">
+    <div
+      class="videoPembuatan"
+      data-aos="fade-up"
+      data-aos-duration="1000"
+      data-aos-anchor-placement="top-bottom"
+      data-aos-easing="ease-in-out"
+    >
+      <iframe
+        class="sizeVideo"
+        src="https://www.youtube.com/embed/cQ23gLNBVRs?si=i52vYgxJHziQVWcU"
+        title="YouTube video player"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen></iframe>
+      <p class="text-base dark:text-white">
+        &copy; Kanal Budaya Indonesia. Video ini diambil dari <a
+          href="https://youtu.be/cQ23gLNBVRs?si=PyiWLr9k1BRgcNhZ"
+          target="_blank">YouTube</a
+        >.
+      </p>
     </div>
-    
-    <div class="container mx-auto px-6 py-8 bg-[#F4F0EC] dark:bg-[#795a3a] dark:text-white rounded-radius">
-		<div class="flex flex-col md:flex-row md:items-center mt-6 justify-between gap-2 md:gap-4">
-			<div class="md:w-6/12 md:mb-6">
-				<h2 class="font-bold text-xl md:text-5xl mb-4">12 Tahapan<br> Pembuatan Batik Tulis</h2>
-			</div>
-			<div class="md:w-3/6 flex justify-end">
-                <p class="text-base md:text-lg">Batik Tulis adalah batik yang dibuat dimana canting di pakai sebagai pen untuk menulis atau menggambar,
-                    canting biasanya dimasukkan ke dalam wajan yang berisi lilin malam yang nantinya digunakan sebagai tinta menggambar.
-                </p>
-			</div>
-		</div>
-        <AccordionProcess />
-	</div>
+  </div>
 
-    <ToolsBatik />
+  <div
+    class="container mx-auto px-6 py-8 bg-[#F4F0EC] dark:bg-[#795a3a] dark:text-white rounded-radius"
+  >
+    <div
+      class="flex flex-col md:flex-row md:items-center mt-6 justify-between gap-2 md:gap-4"
+    >
+      <div class="md:w-6/12 md:mb-6">
+        <h2 class="font-bold text-xl md:text-5xl mb-4">
+          12 Tahapan<br /> Pembuatan Batik Tulis
+        </h2>
+      </div>
+      <div class="md:w-3/6 flex justify-end">
+        <p class="text-base md:text-lg">
+          Batik Tulis adalah batik yang dibuat dimana canting di pakai sebagai
+          pen untuk menulis atau menggambar, canting biasanya dimasukkan ke
+          dalam wajan yang berisi lilin malam yang nantinya digunakan sebagai
+          tinta menggambar.
+        </p>
+      </div>
+    </div>
+    <AccordionProcess />
+  </div>
 
+  <ToolsBatik />
 </BaseLayout>
 
 <script is:inline src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script is:inline>
-    AOS.init();
+  AOS.init();
 </script>

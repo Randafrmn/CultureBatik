@@ -1,82 +1,188 @@
 ---
-import '../styles/global.css';
+import "../styles/global.css";
 ---
 
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
-    <div class="relative" data-aos="fade-right" data-aos-duration="1000" data-aos-anchor-placement="top-bottom"
-    data-aos-easing="ease-in-out">
-        <img id="process-image" class="detail-image-process md:w-5/12 rounded-3xl object-cover" src="/img/Carousel1.png" alt="Process Image">
-    </div>
-    <div class="list-group" data-aos="fade-right" data-aos-duration="1000" data-aos-anchor-placement="top-bottom"
-    data-aos-easing="ease-in-out">
-        <a class="block py-3 px-5 mb-2 hover:bg-gray-100 dark:bg-[#5C3D2E] transition duration-300 ease-in-out rounded-lg shadow-md border border-gray-200 dark:border-[#553829] cursor-pointer" data-target="detail-1" data-image-process="https://firebasestorage.googleapis.com/v0/b/cultik-database.appspot.com/o/Gambar%20Pembuatan%2FNyungging.png?alt=media&token=922921a0-a003-4b48-8492-1e311af02d35" data-info-process="Kegiatan menggambar motif atau pola batik pada secarik kertas, karena tidak semua orang bisa menggambar motif batik sehingga dibutuhkan keterampilan khusus seseorang dalam melakukannya.">01. Nyungging</a>
-        <a class="block py-3 px-5 mb-2 hover:bg-gray-100 dark:bg-[#5C3D2E] transition duration-300 ease-in-out rounded-lg shadow-md border border-gray-200 dark:border-[#553829] cursor-pointer" data-target="detail-2" data-image-process="https://firebasestorage.googleapis.com/v0/b/cultik-database.appspot.com/o/Gambar%20Pembuatan%2FNjaplak.png?alt=media&token=02fb190c-e504-433c-ab4e-1f7d09a8d278" data-info-process="Merupakan kegiatan memindahkan gambar atau pola tersebut ke kain.">02. Njaplak</a>
-        <a class="block py-3 px-5 mb-2 hover:bg-gray-100 dark:bg-[#5C3D2E] transition duration-300 ease-in-out rounded-lg shadow-md border border-gray-200 dark:border-[#553829] cursor-pointer" data-target="detail-3" data-image-process="https://firebasestorage.googleapis.com/v0/b/cultik-database.appspot.com/o/Gambar%20Pembuatan%2FNglowong.png?alt=media&token=5bbe999c-92db-43a5-b642-4e7584f311f3" data-info-process="Proses menempelkan lilin malam di kain dengan media canting, dimana pada proses ini motif batik akan mulai terlihat.">03. Nglowong</a>
-        <a class="block py-3 px-5 mb-2 hover:bg-gray-100 dark:bg-[#5C3D2E] transition duration-300 ease-in-out rounded-lg shadow-md border border-gray-200 dark:border-[#553829] cursor-pointer" data-target="detail-4" data-image-process="https://firebasestorage.googleapis.com/v0/b/cultik-database.appspot.com/o/Gambar%20Pembuatan%2FNgiseni.png?alt=media&token=d884554f-08d1-48e7-8e5f-bf3480d25611" data-info-process="Proses untuk memberi isenan (isian) atau popular dengan mengisi motif pada kain sesuai gambar motif yang sudah digambarkan di tahap pertama. Tahapan ini juga menggunakan media canting.">04. Ngiseni</a>
-        <a class="block py-3 px-5 mb-2 hover:bg-gray-100 dark:bg-[#5C3D2E] transition duration-300 ease-in-out rounded-lg shadow-md border border-gray-200 dark:border-[#553829] cursor-pointer" data-target="detail-5" data-image-process="https://firebasestorage.googleapis.com/v0/b/cultik-database.appspot.com/o/Gambar%20Pembuatan%2FNyolet.png?alt=media&token=7e9b4d51-a235-4e0f-885d-b8337cd6f43d" data-info-process="Proses mewarnai pada bagian-bagian gambar motif yang terlihat sering, seperti kembang, bunga dan lainnya.">05. Nyolet</a>
-        <a class="block py-3 px-5 mb-2 hover:bg-gray-100 dark:bg-[#5C3D2E] transition duration-300 ease-in-out rounded-lg shadow-md border border-gray-200 dark:border-[#553829] cursor-pointer" data-target="detail-5" data-image-process="https://firebasestorage.googleapis.com/v0/b/cultik-database.appspot.com/o/Gambar%20Pembuatan%2FMopok.png?alt=media&token=4b3569d8-37ec-47b8-a637-e6eab40f1caa" data-info-process="Tahapan dalam menutup bagian yang dicolet dengan lilin malam, yang juga diiringi dengan proses nembok atau menutup dasar kain yang tidak diwarnai.">06. Mopok</a>
-    </div>
+  <div
+    class="relative"
+    data-aos="fade-right"
+    data-aos-duration="1000"
+    data-aos-anchor-placement="top-bottom"
+    data-aos-easing="ease-in-out"
+  >
+    <img
+      id="process-image"
+      class="detail-image-process md:w-5/12 rounded-3xl object-cover"
+      src="/img/Carousel1.png"
+      alt="Process Image"
+    />
+  </div>
+  <div
+    class="list-group"
+    data-aos="fade-right"
+    data-aos-duration="1000"
+    data-aos-anchor-placement="top-bottom"
+    data-aos-easing="ease-in-out"
+  >
+    <a
+      class="block py-3 px-5 mb-2 hover:bg-gray-100 dark:bg-[#5C3D2E] transition duration-300 ease-in-out rounded-lg shadow-md border border-gray-200 dark:border-[#553829] cursor-pointer"
+      data-target="detail-1"
+      data-image-process="https://firebasestorage.googleapis.com/v0/b/cultik-database.appspot.com/o/Gambar%20Pembuatan%2FNyungging.png?alt=media&token=922921a0-a003-4b48-8492-1e311af02d35"
+      data-info-process="Kegiatan menggambar motif atau pola batik pada secarik kertas, karena tidak semua orang bisa menggambar motif batik sehingga dibutuhkan keterampilan khusus seseorang dalam melakukannya."
+      >01. Nyungging</a
+    >
+    <a
+      class="block py-3 px-5 mb-2 hover:bg-gray-100 dark:bg-[#5C3D2E] transition duration-300 ease-in-out rounded-lg shadow-md border border-gray-200 dark:border-[#553829] cursor-pointer"
+      data-target="detail-2"
+      data-image-process="https://firebasestorage.googleapis.com/v0/b/cultik-database.appspot.com/o/Gambar%20Pembuatan%2FNjaplak.png?alt=media&token=02fb190c-e504-433c-ab4e-1f7d09a8d278"
+      data-info-process="Merupakan kegiatan memindahkan gambar atau pola tersebut ke kain."
+      >02. Njaplak</a
+    >
+    <a
+      class="block py-3 px-5 mb-2 hover:bg-gray-100 dark:bg-[#5C3D2E] transition duration-300 ease-in-out rounded-lg shadow-md border border-gray-200 dark:border-[#553829] cursor-pointer"
+      data-target="detail-3"
+      data-image-process="https://firebasestorage.googleapis.com/v0/b/cultik-database.appspot.com/o/Gambar%20Pembuatan%2FNglowong.png?alt=media&token=5bbe999c-92db-43a5-b642-4e7584f311f3"
+      data-info-process="Proses menempelkan lilin malam di kain dengan media canting, dimana pada proses ini motif batik akan mulai terlihat."
+      >03. Nglowong</a
+    >
+    <a
+      class="block py-3 px-5 mb-2 hover:bg-gray-100 dark:bg-[#5C3D2E] transition duration-300 ease-in-out rounded-lg shadow-md border border-gray-200 dark:border-[#553829] cursor-pointer"
+      data-target="detail-4"
+      data-image-process="https://firebasestorage.googleapis.com/v0/b/cultik-database.appspot.com/o/Gambar%20Pembuatan%2FNgiseni.png?alt=media&token=d884554f-08d1-48e7-8e5f-bf3480d25611"
+      data-info-process="Proses untuk memberi isenan (isian) atau popular dengan mengisi motif pada kain sesuai gambar motif yang sudah digambarkan di tahap pertama. Tahapan ini juga menggunakan media canting."
+      >04. Ngiseni</a
+    >
+    <a
+      class="block py-3 px-5 mb-2 hover:bg-gray-100 dark:bg-[#5C3D2E] transition duration-300 ease-in-out rounded-lg shadow-md border border-gray-200 dark:border-[#553829] cursor-pointer"
+      data-target="detail-5"
+      data-image-process="https://firebasestorage.googleapis.com/v0/b/cultik-database.appspot.com/o/Gambar%20Pembuatan%2FNyolet.png?alt=media&token=7e9b4d51-a235-4e0f-885d-b8337cd6f43d"
+      data-info-process="Proses mewarnai pada bagian-bagian gambar motif yang terlihat sering, seperti kembang, bunga dan lainnya."
+      >05. Nyolet</a
+    >
+    <a
+      class="block py-3 px-5 mb-2 hover:bg-gray-100 dark:bg-[#5C3D2E] transition duration-300 ease-in-out rounded-lg shadow-md border border-gray-200 dark:border-[#553829] cursor-pointer"
+      data-target="detail-5"
+      data-image-process="https://firebasestorage.googleapis.com/v0/b/cultik-database.appspot.com/o/Gambar%20Pembuatan%2FMopok.png?alt=media&token=4b3569d8-37ec-47b8-a637-e6eab40f1caa"
+      data-info-process="Tahapan dalam menutup bagian yang dicolet dengan lilin malam, yang juga diiringi dengan proses nembok atau menutup dasar kain yang tidak diwarnai."
+      >06. Mopok</a
+    >
+  </div>
 </div>
 
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-20">
-    <div class="relative md:order-2" data-aos="fade-right" data-aos-duration="1000" data-aos-anchor-placement="top-bottom"
-    data-aos-easing="ease-in-out">
-        <img id="process-image-second" class="detail-image-process-second md:w-5/12 rounded-3xl object-cover" src="/img/Carousel2.png" alt="Process Image Second">
-    </div>
-    <div class="list-group" data-aos="fade-right" data-aos-duration="1000" data-aos-anchor-placement="top-bottom"
-    data-aos-easing="ease-in-out">
-        <a class="block py-3 px-5 mb-2 hover:bg-gray-100 dark:bg-[#5C3D2E] transition duration-300 ease-in-out rounded-lg shadow-md border border-gray-200 dark:border-[#553829] cursor-pointer" data-target="detail-5" data-image-process-second="https://firebasestorage.googleapis.com/v0/b/cultik-database.appspot.com/o/Gambar%20Pembuatan%2FNgelir.png?alt=media&token=dad79f18-6ae3-4b49-8662-600fa7cd73fe" data-info-process-second="Tahap dimana proses pewarnaan dilakukan secara menyeluruh pada kain.">07. Ngelir</a>
-        <a class="block py-3 px-5 mb-2 hover:bg-gray-100 dark:bg-[#5C3D2E] transition duration-300 ease-in-out rounded-lg shadow-md border border-gray-200 dark:border-[#553829] cursor-pointer" data-target="detail-5" data-image-process-second="https://firebasestorage.googleapis.com/v0/b/cultik-database.appspot.com/o/Gambar%20Pembuatan%2FNglorod.png?alt=media&token=4bcee88d-4a22-40aa-8cb7-050cb48b3b9e" data-info-process-second="Tahap pertama dalam meluruhkan warna lilin malam ke dalam air yang mendidih.">08. Nglorod</a>
-        <a class="block py-3 px-5 mb-2 hover:bg-gray-100 dark:bg-[#5C3D2E] transition duration-300 ease-in-out rounded-lg shadow-md border border-gray-200 dark:border-[#553829] cursor-pointer" data-target="detail-5" data-image-process-second="https://firebasestorage.googleapis.com/v0/b/cultik-database.appspot.com/o/Gambar%20Pembuatan%2FNgerentesi.png?alt=media&token=a73339f3-9881-4be0-84ef-7d6e290c4047" data-info-process-second="Memberikan titik pada garis-garis ornamen utama dengan digunakannya canting kecil dan halus sehingga hasil titik yang dibuat terlihat rapi.">09. Ngrentesi</a>
-        <a class="block py-3 px-5 mb-2 hover:bg-gray-100 dark:bg-[#5C3D2E] transition duration-300 ease-in-out rounded-lg shadow-md border border-gray-200 dark:border-[#553829] cursor-pointer" data-target="detail-5" data-image-process-second="https://firebasestorage.googleapis.com/v0/b/cultik-database.appspot.com/o/Gambar%20Pembuatan%2FNyumri.png?alt=media&token=e2da98f0-d0f3-4a05-8017-c0511f7ab028" data-info-process-second="Proses menutup kembali beberapa bagian dengan lilin malam.">10. Nyumri</a>
-        <a class="block py-3 px-5 mb-2 hover:bg-gray-100 dark:bg-[#5C3D2E] transition duration-300 ease-in-out rounded-lg shadow-md border border-gray-200 dark:border-[#553829] cursor-pointer" data-target="detail-5" data-image-process-second="https://firebasestorage.googleapis.com/v0/b/cultik-database.appspot.com/o/Gambar%20Pembuatan%2FNyoja.png?alt=media&token=a1ac1dae-d28e-48cf-9396-f6750eadb621" data-info-process-second="Proses mencelupkan kain dengan warna sogan atau coklat, yang merupakan warna khas dasar batik asli Jogja atau Solo.">11. Nyoja</a>
-        <a class="block py-3 px-5 mb-2 hover:bg-gray-100 dark:bg-[#5C3D2E] transition duration-300 ease-in-out rounded-lg shadow-md border border-gray-200 dark:border-[#553829] cursor-pointer" data-target="detail-5" data-image-process-second="https://firebasestorage.googleapis.com/v0/b/cultik-database.appspot.com/o/Gambar%20Pembuatan%2FNglorod2.png?alt=media&token=4c5c3b2a-e257-4629-8538-d56cdb881a9b" data-info-process-second="Proses terakhir dalam meluruhkan lilin malam dengan air yang mendidih.">12. Nglorod</a>
-    </div>
+  <div
+    class="relative md:order-2"
+    data-aos="fade-right"
+    data-aos-duration="1000"
+    data-aos-anchor-placement="top-bottom"
+    data-aos-easing="ease-in-out"
+  >
+    <img
+      id="process-image-second"
+      class="detail-image-process-second md:w-5/12 rounded-3xl object-cover"
+      src="/img/Carousel2.png"
+      alt="Process Image Second"
+    />
+  </div>
+  <div
+    class="list-group"
+    data-aos="fade-right"
+    data-aos-duration="1000"
+    data-aos-anchor-placement="top-bottom"
+    data-aos-easing="ease-in-out"
+  >
+    <a
+      class="block py-3 px-5 mb-2 hover:bg-gray-100 dark:bg-[#5C3D2E] transition duration-300 ease-in-out rounded-lg shadow-md border border-gray-200 dark:border-[#553829] cursor-pointer"
+      data-target="detail-5"
+      data-image-process-second="https://firebasestorage.googleapis.com/v0/b/cultik-database.appspot.com/o/Gambar%20Pembuatan%2FNgelir.png?alt=media&token=dad79f18-6ae3-4b49-8662-600fa7cd73fe"
+      data-info-process-second="Tahap dimana proses pewarnaan dilakukan secara menyeluruh pada kain."
+      >07. Ngelir</a
+    >
+    <a
+      class="block py-3 px-5 mb-2 hover:bg-gray-100 dark:bg-[#5C3D2E] transition duration-300 ease-in-out rounded-lg shadow-md border border-gray-200 dark:border-[#553829] cursor-pointer"
+      data-target="detail-5"
+      data-image-process-second="https://firebasestorage.googleapis.com/v0/b/cultik-database.appspot.com/o/Gambar%20Pembuatan%2FNglorod.png?alt=media&token=4bcee88d-4a22-40aa-8cb7-050cb48b3b9e"
+      data-info-process-second="Tahap pertama dalam meluruhkan warna lilin malam ke dalam air yang mendidih."
+      >08. Nglorod</a
+    >
+    <a
+      class="block py-3 px-5 mb-2 hover:bg-gray-100 dark:bg-[#5C3D2E] transition duration-300 ease-in-out rounded-lg shadow-md border border-gray-200 dark:border-[#553829] cursor-pointer"
+      data-target="detail-5"
+      data-image-process-second="https://firebasestorage.googleapis.com/v0/b/cultik-database.appspot.com/o/Gambar%20Pembuatan%2FNgerentesi.png?alt=media&token=a73339f3-9881-4be0-84ef-7d6e290c4047"
+      data-info-process-second="Memberikan titik pada garis-garis ornamen utama dengan digunakannya canting kecil dan halus sehingga hasil titik yang dibuat terlihat rapi."
+      >09. Ngrentesi</a
+    >
+    <a
+      class="block py-3 px-5 mb-2 hover:bg-gray-100 dark:bg-[#5C3D2E] transition duration-300 ease-in-out rounded-lg shadow-md border border-gray-200 dark:border-[#553829] cursor-pointer"
+      data-target="detail-5"
+      data-image-process-second="https://firebasestorage.googleapis.com/v0/b/cultik-database.appspot.com/o/Gambar%20Pembuatan%2FNyumri.png?alt=media&token=e2da98f0-d0f3-4a05-8017-c0511f7ab028"
+      data-info-process-second="Proses menutup kembali beberapa bagian dengan lilin malam."
+      >10. Nyumri</a
+    >
+    <a
+      class="block py-3 px-5 mb-2 hover:bg-gray-100 dark:bg-[#5C3D2E] transition duration-300 ease-in-out rounded-lg shadow-md border border-gray-200 dark:border-[#553829] cursor-pointer"
+      data-target="detail-5"
+      data-image-process-second="https://firebasestorage.googleapis.com/v0/b/cultik-database.appspot.com/o/Gambar%20Pembuatan%2FNyoja.png?alt=media&token=a1ac1dae-d28e-48cf-9396-f6750eadb621"
+      data-info-process-second="Proses mencelupkan kain dengan warna sogan atau coklat, yang merupakan warna khas dasar batik asli Jogja atau Solo."
+      >11. Nyoja</a
+    >
+    <a
+      class="block py-3 px-5 mb-2 hover:bg-gray-100 dark:bg-[#5C3D2E] transition duration-300 ease-in-out rounded-lg shadow-md border border-gray-200 dark:border-[#553829] cursor-pointer"
+      data-target="detail-5"
+      data-image-process-second="https://firebasestorage.googleapis.com/v0/b/cultik-database.appspot.com/o/Gambar%20Pembuatan%2FNglorod2.png?alt=media&token=4c5c3b2a-e257-4629-8538-d56cdb881a9b"
+      data-info-process-second="Proses terakhir dalam meluruhkan lilin malam dengan air yang mendidih."
+      >12. Nglorod</a
+    >
+  </div>
 </div>
 
 <script is:inline src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script is:inline>
-    AOS.init();
-    document.querySelectorAll('.block').forEach(item => {
-        item.addEventListener('mouseenter', () => {
-            const detailImage = document.getElementById('process-image');
-            const detailImageSecond = document.getElementById('process-image-second');
-            const imageSrc = item.getAttribute('data-image-process');
-            const imageSrcSecond = item.getAttribute('data-image-process-second');
-            
-            if (imageSrc) {
-                detailImage.src = imageSrc;
-                detailImage.classList.add('active');
-            }
-            
-            if (imageSrcSecond) {
-                detailImageSecond.src = imageSrcSecond;
-                detailImageSecond.classList.add('active');
-            }
-            
-            document.querySelectorAll('.additional-info').forEach(info => info.remove());
+  AOS.init();
+  document.querySelectorAll(".block").forEach((item) => {
+    item.addEventListener("mouseenter", () => {
+      const detailImage = document.getElementById("process-image");
+      const detailImageSecond = document.getElementById("process-image-second");
+      const imageSrc = item.getAttribute("data-image-process");
+      const imageSrcSecond = item.getAttribute("data-image-process-second");
 
-            const additionalInfo = document.createElement('div');
-            additionalInfo.classList.add('additional-info');
-            additionalInfo.classList.add('dark:text-white');
-            
-            const infoText = item.getAttribute('data-info-process');
-            const infoTextSecond = item.getAttribute('data-info-process-second');
-            
-            if (infoText) {
-                additionalInfo.textContent = infoText;
-            }
-            
-            if (infoTextSecond) {
-                additionalInfo.textContent += ' ' + infoTextSecond;
-            }
+      if (imageSrc) {
+        detailImage.src = imageSrc;
+        detailImage.classList.add("active");
+      }
 
-            item.insertAdjacentElement('afterend', additionalInfo);
-            additionalInfo.style.display = 'block';
-        });
+      if (imageSrcSecond) {
+        detailImageSecond.src = imageSrcSecond;
+        detailImageSecond.classList.add("active");
+      }
 
-        item.addEventListener('mouseleave', () => {
-            document.querySelectorAll('.additional-info').forEach(info => info.remove());
-        });
+      document
+        .querySelectorAll(".additional-info")
+        .forEach((info) => info.remove());
+
+      const additionalInfo = document.createElement("div");
+      additionalInfo.classList.add("additional-info");
+      additionalInfo.classList.add("dark:text-white");
+
+      const infoText = item.getAttribute("data-info-process");
+      const infoTextSecond = item.getAttribute("data-info-process-second");
+
+      if (infoText) {
+        additionalInfo.textContent = infoText;
+      }
+
+      if (infoTextSecond) {
+        additionalInfo.textContent += " " + infoTextSecond;
+      }
+
+      item.insertAdjacentElement("afterend", additionalInfo);
+      additionalInfo.style.display = "block";
     });
+
+    item.addEventListener("mouseleave", () => {
+      document
+        .querySelectorAll(".additional-info")
+        .forEach((info) => info.remove());
+    });
+  });
 </script>

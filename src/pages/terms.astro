@@ -1,25 +1,31 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import HeroPage from '../components/HeroPage.astro';
-
-
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HeroPage from "../components/HeroPage.astro";
 ---
 
 <BaseLayout>
-    
-    <HeroPage title="Terms & Conditions" description="Home / Term & Conditions"/>
+  <HeroPage title="Terms & Conditions" description="Home / Term & Conditions" />
 
-    <div class="container mx-auto p-6">
-        <div class="flex justify-center">
-            <div class="flex flex-col justify-center items-start w-full lg:w-3/5 dark:text-white">
-                <h1 class="text-left text-md md:text-4xl mt-10 md:mt-12">Terms and Conditions</h1>
-                <p class="text-left text-sm md:text-xl font-sans mt-4 md:mt-6">Selamat datang di Cultik! Dengan mengakses atau menggunakan situs web kami, Anda menyetujui untuk mematuhi dan terikat oleh syarat dan ketentuan berikut. Jika Anda tidak setuju dengan syarat dan ketentuan ini, mohon untuk tidak menggunakan situs web kami.</p>
-            </div>
-        </div>
+  <div class="container mx-auto p-6">
+    <div class="flex justify-center">
+      <div
+        class="flex flex-col justify-center items-start w-full lg:w-3/5 dark:text-white"
+      >
+        <h1 class="text-left text-md md:text-4xl mt-10 md:mt-12">
+          Terms and Conditions
+        </h1>
+        <p class="text-left text-sm md:text-xl font-sans mt-4 md:mt-6">
+          Selamat datang di Cultik! Dengan mengakses atau menggunakan situs web
+          kami, Anda menyetujui untuk mematuhi dan terikat oleh syarat dan
+          ketentuan berikut. Jika Anda tidak setuju dengan syarat dan ketentuan
+          ini, mohon untuk tidak menggunakan situs web kami.
+        </p>
+      </div>
     </div>
+  </div>
 </BaseLayout>
 
 <script is:inline src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script is:inline>
-    AOS.init();
+  AOS.init();
 </script>

@@ -1,21 +1,33 @@
 ---
-const { title } = Astro.props
-const { description } = Astro.props
+const { title } = Astro.props;
+const { description } = Astro.props;
 ---
 
 <div class="container mx-auto">
-    <div class="container mx-auto">
-        <div class="relative flex flex-col justify-end items-center">
-            <img class="hero-image w-full object-cover" src="/img/Carousel3.png" alt="">
-            <div class="title-page absolute rounded-t-3xl bg-[#FFFFFF] dark:bg-neutral-800 w-72 h-24">
-                <h1 class="text-[#292F36] dark:text-white text-center font-display text-2xl font-bold mt-4">{title}</h1>
-                <p class="text-[#292F36] dark:text-white text-center text-sm mt-2">{description}</p>
-            </div>
+  <div class="container mx-auto">
+    <div class="relative flex flex-col justify-end items-center">
+      <img
+        class="hero-image w-full object-cover"
+        src="/img/Carousel3.png"
+        alt=""
+      />
+      <div
+        class="title-page absolute rounded-t-3xl bg-[#FFFFFF] dark:bg-neutral-800 w-72 h-24"
+      >
+        <h1
+          class="text-[#292F36] dark:text-white text-center font-display text-2xl font-bold mt-4"
+        >
+          {title}
+        </h1>
+        <p class="text-[#292F36] dark:text-white text-center text-sm mt-2">
+          {description}
+        </p>
+      </div>
     </div>
-</div>
+  </div>
 
-<script is:inline src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script is:inline>
+  <script is:inline src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script is:inline>
     AOS.init();
-</script>
-    
+  </script>
+</div>
