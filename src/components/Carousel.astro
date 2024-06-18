@@ -3,11 +3,10 @@ import '../styles/global.css';
 import 'flowbite';
 ---
 
-<div class="container mx-auto px-6 ">
+<div class="container mx-auto px-6 mb-12 lg:mb-0">
     <h2 class="text-center text-4xl font-bold md:pt-10 md:pb-6 dark:text-white">Galeri Batik</h2>
     <div id="default-carousel" class="relative w-full" data-carousel="slide">
-
-        <div class="relative h-56 overflow-hidden rounded-xl lg:h-96 mt-6 mb-12 lg:mt-0 lg:mb-12">
+        <div class="relative h-56 overflow-hidden rounded-xl lg:h-96 mt-6 mb-6 lg:mt-0 lg:mb-6">
 
             <div class="hidden duration-700 ease-in-out" data-carousel-item>
                 <img src="/img/Carousel1.png" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
@@ -22,11 +21,14 @@ import 'flowbite';
             </div>
 
             <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <img src="/img/Carousel2.png" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                <img src="/img/Carousel4.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
             </div>
 
             <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <img src="/img/Carousel2.png" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                <img src="/img/Carousel5.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+            </div>
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="/img/Carousel6.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
             </div>
         </div>
 
@@ -36,6 +38,7 @@ import 'flowbite';
             <button type="button" class="w-2 lg:w-3 h-2 lg:h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
             <button type="button" class="w-2 lg:w-3 h-2 lg:h-3 rounded-full" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
             <button type="button" class="w-2 lg:w-3 h-2 lg:h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
+            <button type="button" class="w-2 lg:w-3 h-2 lg:h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="5"></button>
         </div>
 
         <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
@@ -54,6 +57,9 @@ import 'flowbite';
                 <span class="sr-only">Next</span>
             </span>
         </button>
+    </div>
+    <div class="container mx-auto">
+        <p class="text-center text-sm md:text-sm dark:text-white">All images on <a class="text-black dark:text-white font-bold hover:underline" href="https://unsplash.com/" target="_blank" rel="noopener noreferrer">Unsplash</a></p>
     </div>
 </div>
 

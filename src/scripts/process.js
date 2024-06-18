@@ -26,18 +26,18 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     alatbatiks.forEach(alat => {
         const alatbatikCol = document.createElement('div');
-        alatbatikCol.classList.add('col-md-4', 'mb-4', 'md:mb-0');
+        alatbatikCol.classList.add('col-md-4', 'mb-4', 'md:mb-0', 'batik-container', 'mx-auto');
         alatbatikCol.setAttribute('data-aos', 'fade-right');
         alatbatikCol.setAttribute('data-aos-duration', '1000');
         alatbatikCol.setAttribute('data-aos-anchor-placement', 'top-bottom');
         alatbatikCol.setAttribute('data-aos-easing', 'ease-in-out');  
 
         const alatbatikCard = document.createElement('div');
-        alatbatikCard.classList.add('card', 'batik-card', 'border', 'border-gray-200', 'dark:border-neutral-800', 'rounded-lg', 'overflow-hidden', 'h-full', 'bg-[#FFFFFF]');
+        alatbatikCard.classList.add('card', 'batik-card', 'mx-auto' , 'border', 'border-gray-200', 'dark:border-[#715335]', 'rounded-3xl', 'overflow-hidden', 'h-full', 'bg-[#FFFFFF]');
 
         alatbatikCard.innerHTML = `
-            <img src="${alat.gambar}" class="card-img-top w-full h-96 object-cover" alt="${alat.nama_alat}">
-            <div class="card-body p-4 rounded-t-sm dark:bg-neutral-800">
+            <img src="${alat.gambar}" class="card-img-top w-full h-20 object-cover" alt="${alat.nama_alat}">
+            <div class="card-body p-4 bg-white dark:bg-[#5C3D2E]">
                 <h3 class="text-xl text-center">${alat.nama_alat}</h3>
                 <p class="text-sm text-center">${alat.deskripsi}</p>
             </div>
